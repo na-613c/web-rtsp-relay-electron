@@ -7,4 +7,5 @@ start - after running local development server `npm start` [http://localhost:300
 ## Build: 
 `npm run build` -> `npm run builder` (one port 2000 is used in dev and prod version, stop the dev server, so as not to use that local server)
 
-result: release/win-unpacked/web.exe
+## Result: 
+`release/win-unpacked/web.exe`
