@@ -1,0 +1,64 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "main": "public/electron.js",
+  "private": true,
+  "homepage": "./",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "rtsp-relay": "^1.5.1",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development react-scripts start",
+    "electron": "cross-env NODE_ENV=development electron .",
+    "START": "cross-env NODE_ENV=production npm run start && npm run electron",
+    "build": "react-scripts build",
+    "builder": "cross-env NODE_ENV=production electron-builder",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "release": "cross-env NODE_ENV=production npm run build && electron-builder"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^11.2.3",
+    "electron-packager": "^15.4.0",
+    "electron-builder": "^22.11.7",
+    "electron-rebuild": "^2.3.5"
+  },
+  "build": {
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "buildDependenciesFromSource": true,
+    "productName": "web"
+  }
+}

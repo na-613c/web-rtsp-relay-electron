@@ -1,0 +1,1 @@
+export const RTSP = 'view:11111111@10.3.1.139/defaultPrimary/mtu=1440&streamType=u'
