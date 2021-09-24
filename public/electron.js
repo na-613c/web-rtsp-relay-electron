@@ -31,8 +31,8 @@ function createWindow() {
       : `file://${path.join(__dirname, "../build/index.html")}`;
 
   mainWindow.loadURL(url).then();
-  process.env.NODE_ENV === 'development' && mainWindow.webContents.openDevTools();
-
+  // process.env.NODE_ENV === 'development' && mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   mainWindow.on("close", e => {
     if (status === 0) {
